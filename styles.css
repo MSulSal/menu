@@ -32,6 +32,22 @@ body {
   background-position: 0% -100%;
 }
 
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 40%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 60%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 70%;
+}
+
 #menu-background-pattern {
   height: 100vh;
   width: 100vw;
@@ -74,4 +90,25 @@ body {
   display: block;
   text-decoration: none;
   transition: opacity 400ms ease;
+}
+
+#menu-background-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("bg.jpg");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  background-position: center 40%;
+  background-size: 160vmax;
+  opacity: 0.15;
+
+  transition: opacity 800ms ease, background-size 800ms ease,
+    background-position 800ms ease;
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 150vmax;
+  opacity: 0.1;
 }
